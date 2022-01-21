@@ -21,6 +21,7 @@ Route::middleware('auth')->group(function () {
         Route::get('', [\App\Http\Controllers\ClientsController::class, 'index'])->name('clients');
     });
     Route::get('', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('wyloguj', [\App\Http\Controllers\LogoutController::class, 'logout'])->name('logout');
 });
 
 Route::middleware('guest')->group(function () {

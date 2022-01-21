@@ -17,6 +17,7 @@
             </tr>
             </thead>
             <tbody>
+            @if($departments->isNotEmpty())
             @foreach($departments as $department)
                 <tr>
                     <th>{{ $department->name }}</th>
@@ -37,6 +38,11 @@
                     </th>
                 </tr>
             @endforeach
+            @else
+                <tr>
+                    <td class="text-center" colspan="2">Nie znaleziono oddziałów</td>
+                </tr>
+            @endif
             </tbody>
         </table>
     </div>

@@ -46,7 +46,7 @@
                 </div>
                 <div class="form-group">
                     <label for="password">Hasło</label>
-                    <input class="form-control" name="password" id="password" value="{{ old('password') }}">
+                    <input class="form-control" name="password" id="password" value="{{ old('password') }}" type="password">
                 </div>
                 <div class="col-md-4 mx-auto mt-5">
                     <input type="submit" value="Zaloguj się" class="btn btn-outline-primary btn-lg">

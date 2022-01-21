@@ -15,16 +15,24 @@
             </tr>
             </thead>
             <tbody>
-            @foreach($clients as $client)
-                <tr>
-                    <td>{{ $client->de }}</td>
-                    <th>{{ $client->first_name }}</th>
-                    <th>{{ $client->last_name }}</th>
-                    <th>{{ $client->pesel }}</th>
-                    <th>{{ $client->bankAccount->account_number }}</th>
-                    <th>{{ $client->created_at }}</th>
+            @if($clients->isNotEmpty())
+                @foreach($clients as $client)
+                    <tr>
+                        <td>{{ $client->de }}</td>
+                        <th>{{ $client->first_name }}</th>
+                        <th>{{ $client->last_name }}</th>
+                        <th>{{ $client->pesel }}</th>
+                        <th>{{ $client->bankAccount->account_number }}</th>
+                        <th>{{ $client->created_at }}</th>
+                    </tr>
+                @endforeach
+            @else
+                <tr class="text-center">
+                    <td colspan="6">
+                        Nie znaleziono klientów
+                    </td>
                 </tr>
-            @endforeach
+            @endif
             </tbody>
         </table>
     </div>
