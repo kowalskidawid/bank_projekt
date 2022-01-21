@@ -45,6 +45,9 @@
 <div class="container mt-5">
     @yield('content')
 </div>
+<div class="mt-5 py-5 text-center" style="background: lightgray">
+    Projekt zaliczenowy <b>Projektowanie systemów informatycznych</b> &copy; Dawid Kowalski 11337
+</div>
 <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
